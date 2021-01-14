@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navigation">
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="/">Home</a></li>
+        </ul>
+    </nav>
+    <div class="form-cont container">
+        <form action="/editTodo" method="POST">
+            <div class='form-group'>
+                <label for="description">Description</label>
+                <input class='form-control' type="text" name="description" value="<%= todo.description %>">
+            </div>
+            <div class="form-group">
+                <label for="target">Target Date</label>
+                <input class='form-control' type="date" name="target" value="<%= todo.target %>">
+            </div>
+            <input type="hidden" value="<%= todo.id %>" name="id">
+            <button type="submit" class="btn btn-success">Edit Todo</button>
+        </form>
+    </div>
+</body>
+</html>

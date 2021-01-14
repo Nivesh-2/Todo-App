@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navigation">
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="/addTodo">Add Todo</a></li>
+        </ul>
+    </nav>
+    <div class="App container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Targer Date</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <% for(var i = 0; i < todos.length; i++){ %>
+                <tbody>
+                    <tr>
+                        <td><%= todos[i].description %></td>
+                        <td><%= todos[i].target %></td>
+                        <td><a href="/deleteTodo/<%= todos[i].id %>" class="text-light btn btn-primary">Delete</a></td>
+                        <td><a href="/editTodo?id=<%= todos[i].id %>" class="text-light btn btn-warning">Update</a></td>
+                    </tr>
+                </tbody>
+            <% } %>
+        </table>
+    
+    </div>
+</body>
+</html>

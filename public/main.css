@@ -1,0 +1,23 @@
+@import url(https://unpkg.com/bootstrap@4.5.0/dist/css/bootstrap.min.css);
+
+.navigation ul{
+    margin: auto;
+}
+
+.form-cont{
+    align-items: center;
+    width: 70%;
+    padding: 30px 0;
+    margin: auto;
+}
+
+.tag{
+    text-decoration: none;
+    color: white;
+}
+
+.App{
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+}
